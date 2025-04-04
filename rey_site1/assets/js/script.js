@@ -79,7 +79,7 @@ $(document).ready(function(){
         $(document).on('click', '#removeArmWraps, #addArmsWraps', function() {
             var $button = $(this);
             if ($button.text() === 'REMOVE ARM WRAPS') {
-                $button.text('ADD GLOVES').attr('id', 'addArmsWraps');
+                $button.text('ADD ARM WRAPS').attr('id', 'addArmsWraps');
                 whatImg2[3] = "-NoArmWraps";
                 console.log(whatImg2);
             } else {
@@ -158,9 +158,18 @@ $(document).ready(function(){
             changeTheImage()
         });
 
-        function changeTheImage(){
+        function changeTheImage() {
             let whatImg = whatImg2.join("");
-            $("body").css("background-image", "url('assets/media/" + whatImg + ".png')");
+            let img = new Image();
+            img.src = "assets/media/" + whatImg + ".png";
             console.log(whatImg);
+            img.onload = function () {
+                $("body").css("background-image", "url('" + img.src + "')");
+            };
+            img.onerror = function () {
+                console.error("Image not found:", img.src);
+                alert(whatImg);
+                $("body").css("background-image", "url('assets/media/fallback.png')"); // Use a fallback image
+            };
         }
     });
