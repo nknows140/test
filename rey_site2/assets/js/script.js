@@ -1,6 +1,5 @@
 $(document).ready(function(){
     let whatImg2 = ["Rey", "", "", "", "", "", ""];
-    
         // LOWER / RAISE PANTS
         $(document).on('click', '#lowerPants, #lowerPants2, #lowerPants3, #raisePants', function() {
             var $button = $(this);
@@ -172,4 +171,7 @@ $(document).ready(function(){
                 $("body").css("background-image", "url('assets/media/fallback.png')"); // Use a fallback image
             };
         }
+        //temp disable this untill it works
+        $("#looseHair").css("background-color", "darkgray");
+        $("#looseHair").prop("disabled", true);
     });
