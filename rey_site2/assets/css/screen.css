@@ -1,0 +1,39 @@
+body{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    background-image: url("../media/Rey.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container{
+    margin: auto;
+    max-width: 100%;
+}
+
+button{
+    font-size: 1em;
+    background-color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    margin: 5vh 0 2vh 0;
+}
+
+ul{
+    margin-top: 2vh;
+    margin-bottom: 20vh;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
